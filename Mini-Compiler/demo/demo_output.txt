@@ -1,0 +1,62 @@
+==================================================
+Mini Compiler Demo - Arithmetic Expressions
+==================================================
+
+Enter an expression:
+> a + b * c
+
+Results:
+--------------------
+Postfix notation:
+a b c * +
+
+Three-address code:
+t0 = b * c
+t1 = a + t0
+--------------------
+
+Enter an expression:
+> (a + b) * c
+
+Results:
+--------------------
+Postfix notation:
+a b + c *
+
+Three-address code:
+t0 = a + b
+t1 = t0 * c
+--------------------
+
+Enter an expression:
+> a * b + c * d
+
+Results:
+--------------------
+Postfix notation:
+a b * c d * +
+
+Three-address code:
+t0 = a * b
+t1 = c * d
+t2 = t0 + t1
+--------------------
+
+Enter an expression:
+> ((a + b) * c) + d
+
+Results:
+--------------------
+Postfix notation:
+a b + c * d +
+
+Three-address code:
+t0 = a + b
+t1 = t0 * c
+t2 = t1 + d
+--------------------
+
+Enter an expression:
+> quit
+
+Goodbye! 
